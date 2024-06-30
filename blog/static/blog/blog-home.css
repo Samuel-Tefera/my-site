@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: border-box;
+}
+
+header{
+    background-color: #5b1d1d;
+}
+
+header a{
+    text-decoration: none;
+    color: #f5eaea;
+}
+
+.main-navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.header-text{
+    max-width: 60rem;
+    padding: 2rem;
+}
+
+.header-text h1{
+    font-size: 3.4rem;
+    color: #d5adad;
+    margin-left: 3rem;
+}
+
+.header-text p{
+    font-size: 2rem;
+    text-indent: 2.8rem;
+    color: #d5adad;
+}
