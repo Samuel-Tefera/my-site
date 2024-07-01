@@ -113,6 +113,27 @@ header a{
     color: #a14646;
 }
 
+.see-more{
+    margin: 3rem auto 10rem;
+    text-align: center;
+}
+
+.big-btn{
+    text-decoration: none;
+    color: #cb9898;
+    font-size: 1.4rem;
+    border: 1px solid #3c1414;
+    background-color: #3c1414;
+    padding: 1rem 1.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.big-btn:hover{
+    color: #d5adad;
+    background-color: #6a2222;
+}
+
 .footer{
     background-color: #3c1414   ;
     height: 10rem;
@@ -138,6 +159,6 @@ header a{
 }
 
 .social-icon svg:hover{
-    stroke: #cb9898;
+    stroke: #d5adad;
     font-weight: bold;
 }
