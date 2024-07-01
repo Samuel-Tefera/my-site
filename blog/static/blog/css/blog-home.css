@@ -117,3 +117,27 @@ header a{
     background-color: #3c1414   ;
     height: 10rem;
 }
+
+.footer h3{
+    color: #a14646;
+    font-weight: 100;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+}
+
+.social-links{
+    display: flex; 
+    gap: 2rem;
+    justify-content: center;
+}
+
+.social-icon svg{
+    width: 2rem;
+    height: 2rem;
+    stroke: #a14646;
+}
+
+.social-icon svg:hover{
+    stroke: #cb9898;
+    font-weight: bold;
+}
