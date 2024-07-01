@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: border-box;
+    font-family: sans-serif;
+}
+
+header{
+    background-color: #5b1d1d;
+}
+
+header a{
+    text-decoration: none;
+    color: #f5eaea;
+}
+
+.main-navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.header-text{
+    max-width: 60rem;
+    padding: 2rem;
+}
+
+.header-text h1{
+    font-size: 3.4rem;
+    color: #d5adad;
+    margin-left: 3rem;
+}
+
+.header-text p{
+    font-size: 2rem;
+    text-indent: 2.8rem;
+    color: #d5adad;
+}
+
+/* LATEST POST SECTION */
+
+.post-section{
+    margin: 1rem 0;
+    padding: 2rem 4rem;
+}
+
+.post-section h2{
+    text-align: center;
+    font-size: 1.6rem;
+    color: #5b1d1d;
+}
+
+.img-box{
+    max-width: 30rem;
+}
+
+.post-img{
+    width: 95%;
+}
+
+.post{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 4rem;
+}
+
+.post:last-child{
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.post-box{
+    margin-bottom: 4rem;
+}
+
+.post-title{
+    margin-left: 4rem;
+    font-size: 2.2rem;
+    color: #0f0505;
+}
+
+.post-text{
+    font-size: 1.3rem;
+    text-indent: 2rem;
+    line-height: 1.4;
+    color: #0f0505;
+    position: relative;
+}
+
+.more-btn{
+    text-decoration: none;
+    position: absolute;
+    left: 75%;
+    color: #0f0f0f;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.more-btn:hover{
+    color: #a14646;
+}
+
+.footer{
+    background-color: #3c1414   ;
+    height: 10rem;
+}
