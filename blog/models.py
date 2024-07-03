@@ -13,7 +13,7 @@ class Post(models.Model):
         return self.title
       
       
-class Comments(models.Model):
+class Comment(models.Model):
     user_name = models.CharField(max_length=100)
     user_email = models.EmailField()
     comment_text = models.TextField(max_length=200)
@@ -23,5 +23,5 @@ class Comments(models.Model):
 class Like(models.Model):
     like = models.IntegerField(default=0)
     dislike = models.IntegerField(default=0)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='Likes')
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='likes')
     
