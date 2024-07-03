@@ -2,5 +2,4 @@ my_site/__pycache__
 my_site/__init__.py
 blog/__pycache__
 blog/__init__.py
-blog/migration/__pycache__
-blog/migration/__init__.py
+blog/migrations
