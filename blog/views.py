@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView
+from django.views import View
 
 from .models import Post, Comment, Like
 
@@ -23,3 +24,14 @@ class AllPostPageView(ListView):
     model = Post
     ordering = ['-date']
     context_object_name = 'posts'
+
+
+class PostDetailPage(View):
+    def get(self, request, slug):
+        post= Post.objects.get(slug=slug)
+        return render(request, 'blog/post-detail.html', {
+            'post' : post,
+        })
+    
+    def post(self, request):
+        return render(request, 'blog/post-detail.html')
