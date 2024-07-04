@@ -1,40 +1,19 @@
 {% extends "blog/base.html" %}
-
 {% block content %}
+<link rel="stylesheet" href="../../static/blog/css/post-detail.css">
     <section class="about-post">
         <div class="post-detail">
-            <img class="post-img" src="../../static/blog/images/coding.jpg" alt="">
+            <img class="post-img" src="{{post.image.url}}" alt="">
             <div class="post-description">
-                <h3 class="post-title">In to the Bad Land</h3>
-                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aut 
-                    labore ipsam incidunt sunt, quis, aperiam ipsa voluptatem facilis in 
-                repudiandae! Sint magni accusantium ratione. Quas quia molestiae 
-                vero temporibus.</p>
+                <h3 class="post-title">{{post.title}}</h3>
+                <p class="post-text">{{post.explicit}}</p>
                 </p>
             </div>
         </div>
-        <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aut
-        labore ipsam incidunt sunt, quis, aperiam ipsa voluptatem facilis in
-        repudiandae! Sint magni accusantium ratione.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aut
-        labore ipsam incidunt sunt, quis, aperiam ipsa voluptatem facilis in
-        repudiandae! Sint magni accusantium ratione. <br>
-        Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aut
-        labore ipsam incidunt sunt, quis, aperiam ipsa voluptatem facilis in
-        repudiandae! Sint magni <br> accusantium ratione.Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aut
-        labore ipsam incidunt sunt, quis, aperiam ipsa voluptatem facilis in
-        repudiandae! Sint magni accusantium ratione.Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aut
-        labore ipsam incidunt sunt, quis, aperiam ipsa voluptatem facilis in
-        repudiandae! Sint magni accusantium ratione.
-        Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. Repellendus aut
-        labore ipsam incidunt sunt, quis, aperiam ipsa voluptatem facilis in
-        repudiandae! Sint magni accusantium ratione. dolor sit amet consectetur adipisicing elit. Repellendus aut
-        labore ipsam incidunt sunt, quis, aperiam ipsa voluptatem facilis in
-        repudiandae! Sint magni accusantium ratione. Quas quia molestiae
-        vero temporibus.</p>
+        <p class="post-text">{{post.content}}</p>
         <div class="post-info">
-            <p>By Samuel Tefera</p>
-            <p>12/03/2014</p>
+            <p>By {{post.author}}</p>
+            <p>{{post.date}}</p>
             <p>Addis Ababa, Ethiopea</p>
         </div>
     </section>
