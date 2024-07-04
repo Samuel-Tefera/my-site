@@ -1,9 +1,25 @@
 from django.shortcuts import render
+from django.views.generic import ListView
+
+from .models import Post, Comment, Like
+
 
 # Create your views here.
 
-def start_page(request):
-    return render(request, 'blog/blog-home.html')
+class StartPageView(ListView):
+    template_name = 'blog/blog-home.html'
+    model = Post
+    context_object_name = 'posts'
+    ordering = ['-date']
+    
+    def get_queryset(self):
+        query_set = super().get_queryset()
+        data = query_set[:3]
+        return data
+    
 
-def all_post_page(request):
-    return render(request, 'blog/all-post.html')
+class AllPostPageView(ListView):
+    template_name = 'blog/all-post.html'
+    model = Post
+    ordering = ['-date']
+    context_object_name = 'posts'
