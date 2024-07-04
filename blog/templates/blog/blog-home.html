@@ -13,55 +13,13 @@
     </header>
     <section class="post-section">
         <h2>My Latest Posts</h2>
-        <div class="post">
-            <div class="img-box">
-                <img  class="post-img" src="../../static/blog/images/coding.jpg" alt="">
-            </div>
-            <div class="post-box">
-                <h3 class="post-title">In to The Bad Land</h3>
-                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ex 
-                    aperiam minus distinctio ipsa totam natus similique laudantium quia voluptas in
-                    Quas velit repudiandae ipsa totam natus similique laudantium quia
-                    voluptas dolorem odio odit laboriosam sapiente quis.
-                    Quas velit repudiandae ipsa totam natus similique laudantium quia 
-                    voluptas in?</p>
-                    <a class="more-btn" href="#">Read more &rightarrow;</a>
-            </div>
-        </div>
-        <div class="post">
-            <div class="img-box">
-                <img  class="post-img" src="../../static/blog/images/coding.jpg" alt="">
-            </div>
-            <div class="post-box">
-                <h3 class="post-title">Mountain Hiking</h3>
-                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ex 
-                    aperiam minus distinctio dolorem odio odit laboriosam sapiente quis.
-                    Quas velit repudiandae ipsa totam natus similique laudantium quia 
-                    voluptas in? Quas velit repudiandae ipsa totam natus similique laudantium quia voluptas in
-                    Quas velit repudiandae ipsa totam natus similique laudantium quia 
-                    voluptas in?</p>
-                    <a class="more-btn" href="#">Read more &rightarrow;</a>
-            </div>
-        </div>
-        <div class="post">
-            <div class="img-box">
-                <img  class="post-img" src="../../static/blog/images/coding.jpg" alt="">
-            </div>
-            <div class="post-box">
-                <h3 class="post-title">Python for Ai</h3>
-                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ex 
-                    aperiam minus distinctio ipsa totam natus similique laudantium quia voluptas in
-                    Quas velit repudiandae ipsa totam natus similique laudantium quia
-                    voluptas dolorem odio odit laboriosam sapiente quis.
-                    Quas velit repudiandae ipsa totam natus similique laudantium quia 
-                    voluptas in?</p>
-                    <a class="more-btn" href="#">Read more &rightarrow;</a>
-            </div>
-        </div>
+        {% for post in  posts%}
+            {% include "blog/includes/includes.html" %}
+        {% endfor %}
     </section>
     <section class="see-more">
         <div>
-            <a class="big-btn" href="{% url "all-posts" %}">See all posts   </a>
+            <a class="big-btn" href="{% url "all-posts" %}">See all posts</a>
         </div>
     </section>
 {% endblock content %}
