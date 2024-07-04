@@ -5,6 +5,6 @@
     <div class="post-box">
         <h3 class="post-title">{{post.title}}</h3>
         <p class="post-text">{{post.explicit}}</p>
-        <a class="more-btn" href="#">Read more &rightarrow;</a>
+        <a class="more-btn" href="{% url "post-detail" post.slug %}">Read more &rightarrow;</a>
     </div>
 </div>
