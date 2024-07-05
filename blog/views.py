@@ -3,6 +3,7 @@ from django.views.generic import ListView
 from django.views import View
 
 from .models import Post, Comment
+from .forms import CommentForm
 
 
 # Create your views here.
@@ -29,8 +30,10 @@ class AllPostPageView(ListView):
 class PostDetailPage(View):
     def get(self, request, slug):
         post= Post.objects.get(slug=slug)
+        form = CommentForm
         return render(request, 'blog/post-detail.html', {
             'post' : post,
+            'form' : form
         })
     
     def post(self, request):
