@@ -1,12 +1,31 @@
 .about-post{
     padding: 4rem;
     position: relative;
+    text-align: center;
+}
+
+.post-img{
+    height: 25rem;
+    width: 75%;
 }
 
 .post-detail{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    text-align: left;
 }
+
+.post-content{
+    margin-top: 0;
+    padding-top: 0;
+    text-align: left;
+}
+
+.post-content p{
+    font-size: 1.3rem;
+    text-indent: 2rem;
+    line-height: 1.4;
+    color: #0f0505;   
+}
+
 
 .post-info{
     position: absolute;
@@ -17,6 +36,7 @@
     margin: 0.4rem;
     font-style: italic;
     display: inline;
+    font-size: 1rem;
 }
 
 .comment-section{
@@ -66,6 +86,15 @@
     color: #5b1d1d;
     margin-top: 0;
     margin-bottom: 2.8rem;
+}
+
+.call-to-comment button{
+    background-color: #5b1d1d;
+    color: #ccc;
+    padding: 0.5rem 0.5rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 6px;
 }
 
 .form-field{
