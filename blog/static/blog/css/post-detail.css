@@ -99,9 +99,23 @@
 
 .form-field{
     margin-bottom: 2rem;
+    font-family: inherit;
 }
 
 .form-field label{
     display: block;
     margin-bottom: 0.5rem;
+}
+
+.form-field input{
+    padding: 0.3rem 0.5rem;
+    height: 1rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.form-field textarea{
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    font-family: sans-serif;
 }
