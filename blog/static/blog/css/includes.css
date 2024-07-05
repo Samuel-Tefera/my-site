@@ -53,9 +53,6 @@
 
 .more__post_info{
     margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
     position: relative;
 }
 
@@ -66,32 +63,10 @@
     color: #0f0f0f;
     font-weight: bold;
     font-size: 1.4rem;
-    display: block;
 }
 
 .more-btn:hover{
     color: #a14646;
-}
-
-.like-info{
-    display: flex;
-    width: 1.5rem;
-    margin-left: 0.5rem;
-    color: #3c1414;
-}
-
-.like-info p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.like-info p span{
-    margin: 0 0.3rem;
-}
-
-.like-info p{
-    margin-left: 2rem;
 }
 
 .see-more{

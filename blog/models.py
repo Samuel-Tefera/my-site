@@ -20,10 +20,3 @@ class Comment(models.Model):
     user_email = models.EmailField()
     comment_text = models.TextField(max_length=200)
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
-
-
-class Like(models.Model):
-    like = models.IntegerField(default=0)
-    dislike = models.IntegerField(default=0)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='likes')
-    

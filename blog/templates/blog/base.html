@@ -1,16 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../static/blog/css/blog-home.css">
+    <link rel="stylesheet" href="{% static "blog/css/blog-home.css" %}">
+    {% block css_style %}{% endblock css_style %}
     <title>Samuel&dash;Blog</title>
 </head>
 <body>
     <header>
         <nav class="main-navigation">
             <div class="nav-icon">
-                <a class="main-nav-icon" href="#">About Samuel</a>
+                <a class="main-nav-icon" href="{% url "home-page" %}">Samuel' Blog</a>
             </div>
             <div>
                 <ul class="nav-list">

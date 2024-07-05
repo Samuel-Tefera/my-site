@@ -1,4 +1,9 @@
 {% extends "blog/base.html" %}
+{% load static %}
+
+{% block css_style %}
+    <link rel="stylesheet" href="{% static "blog/css/includes.css" %}">
+{% endblock css_style %}
 
 {% block content %}
     <section class="post-section">

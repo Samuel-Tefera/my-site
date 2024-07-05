@@ -1,21 +1,23 @@
 {% extends "blog/base.html" %}
-{% block content %}
-<link rel="stylesheet" href="../../static/blog/css/post-detail.css">
+{% load static %}
+
+{% block css_style %}
+<link rel="stylesheet" href="{% static "blog/css/includes.css" %}">
+<link rel="stylesheet" href="{% static "blog/css/post-detail.css" %}">      
+{% endblock css_style %}
+
+{% block content %} 
     <section class="about-post">
-        <div class="post-detail">
-            <img class="post-img" src="{{post.image.url}}" alt="">
-            <div class="post-description">
-                <h3 class="post-title">{{post.title}}</h3>
-                <p class="post-text">{{post.explicit}}</p>
-                </p>
+            <img class="post-img" src="{{post.image.url}}" alt="{{post.title}}">
+        <div class="post-content">
+            <h3 class="post-title">{{post.title}}</h3>
+            {{post.content | linebreaks}}
+            <div class="post-info">
+                <p>By {{post.author}}</p>
+                <p>{{post.date}}</p>
+                <p>Addis Ababa, Ethiopea</p>
             </div>
-        </div>
-        <p class="post-text">{{post.content}}</p>
-        <div class="post-info">
-            <p>By {{post.author}}</p>
-            <p>{{post.date}}</p>
-            <p>Addis Ababa, Ethiopea</p>
-        </div>
+        <div>
     </section>
     <section class="comment-section">
         <h2 class="">Comments</h2>
@@ -51,6 +53,7 @@
                     <label for="text">Your Comment</label>
                     <textarea rows="6" cols="35" type="text" name="comment-text" id="text"></textarea>
                 </div>
+                <button type="button">Add Comment</button>
             </form>
         </div>
     </section>

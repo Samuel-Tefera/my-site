@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from django.views import View
 
-from .models import Post, Comment, Like
+from .models import Post, Comment
 
 
 # Create your views here.

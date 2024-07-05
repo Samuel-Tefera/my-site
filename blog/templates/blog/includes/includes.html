@@ -6,10 +6,6 @@
         <h3 class="post-title">{{post.title}}</h3>
         <p class="post-text">{{post.explicit}}</p>
         <div class="more__post_info">
-            <div class="like-info">
-                <p><span>12</span>likes</p>
-                <p><span>12</span>dislikes</p>
-            </div>
             <a class="more-btn" href="{% url "post-detail" post.slug %}">Read more &rightarrow;</a>
         </div>
     </div>
