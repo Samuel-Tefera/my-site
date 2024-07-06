@@ -40,14 +40,16 @@
     <section class="call-to-comment">   
         <h2>Leave Your Comment Here</h2>
         <div>
-            <form action="" class="comment-form">
+            <form action="{% url "post-detail" post.slug %}" class="comment-form" method="POST">
+                {% csrf_token %}
                 {% for field in form %}
                     <div class="form-field">
                         {{field.label_tag}}
                         {{field}}
+                        {{field.errors}}
                     </div>
                 {% endfor %}
-                <button type="button">Add Comment</button>
+                <button>Add Comment</button>
             </form>
         </div>
     </section>
