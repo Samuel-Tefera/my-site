@@ -11,7 +11,7 @@ class CommentForm(forms.ModelForm):
             'user_email' : 'Your Email',
             'comment_text' : 'Your Comment'
         }
-        
+
         error_messages = {
             'user_name' : {
                 'required' : 'Your name can not be empty!',
