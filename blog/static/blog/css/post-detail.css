@@ -73,19 +73,19 @@
 }
 
 .call-to-comment{
-    margin: 2rem auto;
+    margin: 1rem auto 6rem auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     width: 30rem;
-    padding: 2rem 4rem;
-    margin-bottom: 4rem;
+    padding: 1.5rem 3rem;
+    border-radius: 6px;
 }
 
 .call-to-comment h2{
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: #5b1d1d;
     margin-top: 0;
-    margin-bottom: 2.8rem;
+    margin-bottom: 1.8rem;
 }
 
 .call-to-comment button{
@@ -98,7 +98,7 @@
 }
 
 .form-field{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-family: inherit;
 }
 
@@ -108,14 +108,59 @@
 }
 
 .form-field input{
-    padding: 0.3rem 0.5rem;
     height: 1rem;
     font-size: 1rem;
     font-family: sans-serif;
+    padding: 0.2rem;
+    border-width: 0.5px;
+    border-radius: 6px;
 }
 
 .form-field textarea{
-    padding: 0.3rem 0.5rem;
     font-size: 1rem;
     font-family: sans-serif;
+    border-width: 0.5px;
+    border-radius: 6px;
+}
+
+.errorlist{
+    margin-top: 0.5rem;
+    padding: 0;
+}
+
+.errorlist li {
+    list-style: none;
+    color: #cc0000;
+}
+
+.error-alert-box{
+    width: 30rem;
+    margin: 2rem auto;
+    background-color: #ff8888;
+    padding:1.5rem 3.6rem;
+    margin-bottom: 0;
+    color: #e60000;
+}
+
+.error-alert-box a{
+    padding: 0.4rem 1rem;
+    border: 1px solid #cc0000;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1rem;
+    margin-top: 1rem;
+    background-color: #cc0000;
+}
+
+.error-alert-box a:hover{
+    background-color: #ff1a1a;
+    border-color: #ff1a1a;
+}
+
+.form-error label{
+    color: #cc0000;
+}
+.form-error input,
+.form-error textarea{
+    border-color: #cc0000;
 }
