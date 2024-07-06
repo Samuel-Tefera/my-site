@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 from django.views import View
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 from .models import Post, Comment
 from .forms import CommentForm
@@ -36,5 +38,20 @@ class PostDetailPage(View):
             'form' : form
         })
     
-    def post(self, request):
-        return render(request, 'blog/post-detail.html')
+    def post(self, request, slug):
+        comment_form = CommentForm(request.POST)
+        post = Post.objects.get(slug=slug)
+        
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.save()
+        
+            return HttpResponseRedirect(reverse('post-detail', args=[slug]))
+        
+        context = {
+            'post' : post,
+            'form' : comment_form
+        }
+        
+        return render(request, 'blog/post-detail.html', context)
