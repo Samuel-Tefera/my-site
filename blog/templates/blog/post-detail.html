@@ -28,21 +28,15 @@
     </section>
     <section class="comment-section">
         <h2 class="">Comments</h2>
-        <div class="comment">
-            <h3 class="comment-name">Abebe</h3>
-            <p class="comment-text">Nice view! I dont see the way you see  it.</p>
-        </div>
-        <div class="comment">
-            <h3 class="comment-name">Ben</h3>
-            <p class="comment-text">Lorem ipsum dolor sit 
-                amet consectetur adipisicing elit. Perspiciatis odit quidem, 
-                voluptatibus veritatis molestiae iure soluta corrupti ipsam </p>
-        </div>
-        <div class="comment">
-            <h3 class="comment-name">Betty</h3>
-            <p class="comment-text">Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Neque voluptate quis distinctio molestiae et quaerat fugiat .</p>
-        </div>
+        {% if not comments.exists%}
+            <h3>No comments yet!</h3>
+        {% endif %}
+        {% for comment in comments %}
+            <div class="comment">
+                <h3>{{comment.user_name}}</h3>
+                <p class="comment-text">{{comment.comment_text}}</p>
+            </div>
+        {% endfor %}
     </section>
     <section class="call-to-comment" id="comment-from">   
         <h2>Leave Your Comment Here</h2>
@@ -50,7 +44,7 @@
             <form action="{% url "post-detail" post.slug %}" class="comment-form" method="POST" novalidate>
                 {% csrf_token %}
                 {% for field in form %}
-                    <div class="form-field {% if form.errors %}form-error{% endif %}">
+                    <div class="form-field {% if field.errors %}form-error{% endif %}">
                         {{field.label_tag}}
                         {{field}}
                         {{field.errors}}
