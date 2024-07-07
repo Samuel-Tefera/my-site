@@ -11,5 +11,10 @@ class PostAdmin(admin.ModelAdmin):
     }
 
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('comment_text',)
+    list_filter = ('post',)
+
+
 admin.site.register(Post, PostAdmin)
-admin.site.register(Comment)
+admin.site.register(Comment, CommentAdmin)
