@@ -32,15 +32,19 @@ class AllPostPageView(ListView):
 class PostDetailPage(View):
     def get(self, request, slug):
         post= Post.objects.get(slug=slug)
+        comments = Comment.objects.filter(post=post.id)
         form = CommentForm
+        
         return render(request, 'blog/post-detail.html', {
             'post' : post,
+            'comments':comments,
             'form' : form
         })
     
     def post(self, request, slug):
         comment_form = CommentForm(request.POST)
         post = Post.objects.get(slug=slug)
+        comments = Comment.objects.filter(post=post.id)
         
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
@@ -51,6 +55,7 @@ class PostDetailPage(View):
         
         context = {
             'post' : post,
+            'comments':comments,
             'form' : comment_form
         }
         
