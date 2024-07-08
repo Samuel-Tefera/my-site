@@ -78,12 +78,14 @@
     border-radius: 6px;
 }
 
-.more-btn:hover{
+.more-btn:hover,
+.more-btn:active{
     color: #d5adad;
     background-color: #6a2222;
 }
 
-.read-later:hover{
+.read-later:hover,
+.read-later:active{
     color: #d5adad;
     background-color: #3c1414;
 }
