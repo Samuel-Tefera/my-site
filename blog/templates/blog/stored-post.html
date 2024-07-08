@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block css_style %}
+    <link rel="stylesheet" href="{% static "blog/css/stored-post.css" %}">
+{% endblock css_style %}
+
+{% block content %}
+    <div class="stored-post">
+        <h3>Stored Posts</h3>
+        <ul>
+            <li>
+                <a href="#">Exploring the Tech World: A Journey Through Innovation</a>
+            </li>
+            <li><a href="#">Unleashing the Power of Python: A Comprehensive Guide to Programming Excellence</a>    
+            </li>
+            <li><a href="#">The Journey to Full Stack Development: Navigating Challenges and Embracing Growth</a>
+            </li>
+        </ul>
+    </div>
+    <div class="btn-box">
+        <a href="{% url "home-page" %}">Back Home</a>
+    </div>
+{% endblock content %}
