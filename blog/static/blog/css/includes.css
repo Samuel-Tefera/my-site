@@ -52,21 +52,40 @@
 }
 
 .more__post_info{
+    width: fit-content;
+    margin: 2rem 0 auto auto;
     margin-top: 2rem;
-    position: relative;
+    gap: 3rem;
 }
 
 .more-btn{
     text-decoration: none;
-    position: absolute;
-    left: 75%;
-    color: #0f0f0f;
-    font-weight: bold;
+    color: #cb9898;
     font-size: 1.4rem;
+    border: 1px solid #3c1414;
+    padding: 0.5rem 1rem;
+    background-color: #3c1414;
+    border-radius: 6px;
+    margin-left: 2rem;
+}
+
+.read-later{
+    text-decoration: none;
+    color: #0f0f0f;
+    font-size: 1.4rem;
+    border: 1px solid #3c1414;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
 }
 
 .more-btn:hover{
-    color: #a14646;
+    color: #d5adad;
+    background-color: #6a2222;
+}
+
+.read-later:hover{
+    color: #d5adad;
+    background-color: #3c1414;
 }
 
 .see-more{
