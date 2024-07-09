@@ -7,18 +7,19 @@
 
 {% block content %}
     <div class="stored-post">
+        {% if has_post %}
         <h3>Stored Posts</h3>
         <ul>
-            <li>
-                <a href="#">Exploring the Tech World: A Journey Through Innovation</a>
-            </li>
-            <li><a href="#">Unleashing the Power of Python: A Comprehensive Guide to Programming Excellence</a>    
-            </li>
-            <li><a href="#">The Journey to Full Stack Development: Navigating Challenges and Embracing Growth</a>
-            </li>
+            {% for post in stored_posts %}
+                <li>
+                    <a href="{% url "post-detail" post.slug%}">{{post.title}}</a>
+                </li>
+            {% endfor %}
         </ul>
+        {% else %}<h2>You don't have posts yet!</h2>
+        {% endif %}
     </div>
     <div class="btn-box">
-        <a href="{% url "home-page" %}">Back Home</a>
+        <a href="{% url "home-page" %}">Back to Home</a>
     </div>
 {% endblock content %}

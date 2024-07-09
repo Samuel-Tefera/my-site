@@ -14,17 +14,23 @@
             <a href="#comment-from">Fix</a>
         </div>
     {% endif %}
-    <section class="about-post">
+    <section class="post-detail">
+        <div class="post-header">
             <img class="post-img" src="{{post.image.url}}" alt="{{post.title}}">
-        <div class="post-content">
-            <h3 class="post-title">{{post.title}}</h3>
-            {{post.content | linebreaks}}
             <div class="post-info">
-                <p>By {{post.author}}</p>
-                <p>{{post.date}}</p>
-                <p>Addis Ababa, Ethiopea</p>
+                <h3 class="post-title">{{post.title}}</h3>
+                <p>By {{post.author}}, {{post.date}}</p>
+                <form action="/stored-post" method="POST">
+                    {%csrf_token%}
+                    <input type="hidden" value="{{post.id}}" name="post-id"></input>
+                    <button class="read-later">{% if saved_for_later %}
+                            Remove from 'Read later' list
+                        {% else %}Read later
+                        {% endif %}</button>
+                </form>
             </div>
-        <div>
+        </div>
+        {{post.content | linebreaks}}
     </section>
     <section class="comment-section">
         <h2 class="">Comments</h2>
