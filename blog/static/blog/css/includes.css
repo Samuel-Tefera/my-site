@@ -52,13 +52,12 @@
 }
 
 .more__post_info{
-    width: fit-content;
-    margin: 2rem 0 auto auto;
-    margin-top: 2rem;
-    gap: 3rem;
+    margin: 2rem 2rem auto auto;
+    width: max-content;
 }
 
 .more-btn{
+    display: block;
     text-decoration: none;
     color: #cb9898;
     font-size: 1.4rem;
@@ -67,27 +66,13 @@
     background-color: #3c1414;
     border-radius: 6px;
     margin-left: 2rem;
-}
-
-.read-later{
-    text-decoration: none;
-    color: #0f0f0f;
-    font-size: 1.4rem;
-    border: 1px solid #3c1414;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
+    width: max-content;
 }
 
 .more-btn:hover,
 .more-btn:active{
     color: #d5adad;
     background-color: #6a2222;
-}
-
-.read-later:hover,
-.read-later:active{
-    color: #d5adad;
-    background-color: #3c1414;
 }
 
 .see-more{

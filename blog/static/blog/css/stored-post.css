@@ -11,6 +11,11 @@
     color: #5b1d1d;
 }
 
+.stored-post h2{
+    text-align: center;
+    color: #3c1414;
+}
+
 .stored-post ul{ 
     padding: 0 0.5rem; 
 }

@@ -1,43 +1,59 @@
-.about-post{
-    padding: 4rem;
-    position: relative;
-    text-align: center;
+.post-detail{
+    margin: 4rem 2.5rem;
+}
+
+.post-header{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 4rem;
+    padding: 4rem 4rem;
+    background-color: #5b1d1d;
+    border-radius: 12px;
+}
+
+.post-info h3{
+    color: #d5adad;
+    font-size: 2rem;
+    margin: 0 0 2rem 0;
 }
 
 .post-img{
-    height: 25rem;
-    width: 75%;
+    width: 25rem;
+    height: 15rem;
+    border-radius: 12px;
 }
 
-.post-detail{
-    text-align: left;
-}
-
-.post-content{
-    margin-top: 0;
-    padding-top: 0;
-    text-align: left;
-}
-
-.post-content p{
+.post-detail p{
     font-size: 1.3rem;
     text-indent: 2rem;
     line-height: 1.4;
     color: #0f0505;   
 }
 
-
-.post-info{
-    position: absolute;
-    left: 80%;
-}
-
 .post-info p{
-    margin: 0.4rem;
+    width: max-content;
+    margin: 0 4rem  2rem auto;
     font-style: italic;
-    display: inline;
     font-size: 1rem;
+    color: #d5adad;
 }
+
+.read-later{
+    text-decoration: none;
+    color: #d5adad;
+    font-size: 1.4rem;
+    border: 1px solid #d5adad;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background-color: #5b1d1d;
+}
+
+.read-later:hover,
+.read-later:active{
+    color: #5b1d1d;
+    background-color: #d5adad;
+}
+
 
 .comment-section{
     padding: 2rem 6rem;
