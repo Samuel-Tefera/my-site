@@ -5,3 +5,4 @@ blog/__init__.py
 blog/migrations
 db.sqlite3
 uploads/
+.env
