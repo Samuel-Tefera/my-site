@@ -6,3 +6,4 @@ blog/migrations
 db.sqlite3
 uploads/
 .env
+venv_my_site/
